@@ -1,0 +1,21 @@
+{
+    "name": "lup2p-transer",
+    "manifest_version":2,
+    "version": "1.0",
+    "description": "lup2p-transer",
+    "browser_action": {
+       "default_icon": "icon.jpg" ,
+       "default_title": "lup2p-transer",
+        "default_popup": "popup.html"
+     },
+     "background": {
+        "page": "background.html"
+      },
+     "content_scripts": [{
+         "matches": ["http://*/*","https://*/*"],
+         "js": ["js/jquery.js", "js/test.js"]
+    }],
+    "permissions": [
+     "tabs", "http://*/*","https://*/*"
+    ]
+}
